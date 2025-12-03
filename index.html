@@ -1,0 +1,3011 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نادي شرف الفرع - الصفحة الرسمية ✓</title>
+    <meta name="description" content="الصفحة الرسمية لنادي شرف الفرع الرياضي - تعرف على آخر أخبار النادي، اللاعبين، البطولات، والمزيد">
+    <meta name="keywords" content="نادي شرف الفرع, رياضة, كرة قدم, بطولات, لاعبين, أخبار رياضية">
+    <meta name="author" content="نادي شرف الفرع">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="نادي شرف الفرع - الصفحة الرسمية ✓">
+    <meta property="og:description" content="الصفحة الرسمية لنادي شرف الفرع الرياضي">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://files.catbox.moe/6xms09.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsOrganization",
+      "name": "نادي شرف الفرع",
+      "url": "https://yourusername.github.io/sharaf-club",
+      "logo": "https://files.catbox.moe/6xms09.jpg",
+      "description": "نادي رياضي مميز يشارك في البطولات المحلية والدوريات",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "بعدان",
+        "addressRegion": "اليمن"
+      }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* ======== متغيرات الألوان ======== */
+        :root {
+            --primary-color: #004080;
+            --secondary-color: #0066cc;
+            --accent-color: #1a75ff;
+            --light-color: #f0f2f5;
+            --dark-color: #1a1a1a;
+            --background-color: #0d1117;
+            --card-background: #161b22;
+            --text-color: #e6edf3;
+            --text-secondary: #8b949e;
+            --border-color: #30363d;
+            --border-radius: 12px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            --box-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.5);
+            --transition: all 0.3s ease;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --verified-color: #1a75ff;
+            --silver-color: #C0C0C0;
+        }
+
+        /* ======== إعادة التعيين ======== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Tajawal', 'Arial', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ======== شريط التقدم ======== */
+        .progress-container {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 4px;
+            background: transparent;
+            z-index: 1001;
+        }
+
+        .progress-bar {
+            height: 4px;
+            background: var(--gradient);
+            width: 0%;
+            transition: width 0.3s;
+        }
+
+        /* ======== التحميل ======== */
+        .loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--background-color);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .loading.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 120px;
+            height: 120px;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .loader-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .loader-ring {
+            width: 100%;
+            height: 100%;
+            border: 5px solid rgba(255, 255, 255, 0.1);
+            border-top: 5px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .loading-text {
+            color: var(--text-color);
+            font-size: 1.2rem;
+            font-weight: 500;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* ======== الرأس ======== */
+        header {
+            background: var(--gradient);
+            color: white;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://files.catbox.moe/6xms09.jpg') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .logo-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img.logo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .logo-container img.logo:hover {
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .club-title {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 15px;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            position: relative;
+            display: inline-block;
+        }
+
+        .official-badge {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+            font-size: 1.1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            gap: 8px;
+        }
+
+        .verified {
+            color: var(--verified-color);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .verified::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            bottom: -5px;
+            left: -5px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.7; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: bounce 2s infinite;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-10px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-5px);
+            }
+        }
+
+        /* ======== شريط التنقل ======== */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(22, 27, 34, 0.98);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: center;
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            transform: translateY(0);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        nav.hidden {
+            transform: translateY(-100%);
+        }
+
+        .nav-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        nav button {
+            background-color: transparent;
+            border: none;
+            color: var(--text-color);
+            padding: 12px 20px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: var(--transition);
+            margin: 0 5px;
+            border-radius: 30px;
+            position: relative;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        nav button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 0;
+            height: 100%;
+            background: var(--gradient);
+            transition: var(--transition);
+            z-index: -1;
+            border-radius: 30px;
+        }
+
+        nav button:hover, nav button.active {
+            color: white;
+        }
+
+        nav button:hover::before, nav button.active::before {
+            width: 100%;
+        }
+
+        /* ======== الأقسام ======== */
+        section {
+            display: none;
+            padding: 80px 10%;
+            background-color: var(--background-color);
+            border-bottom: 1px solid var(--border-color);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        section.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        section h2 {
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+            color: var(--text-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: 15px;
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            transform: translateX(50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* ======== صور الأقسام ======== */
+        .section-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .section-img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        /* ======== محتوى النص ======== */
+        section p {
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+            text-align: justify;
+            line-height: 1.8;
+            color: var(--text-secondary);
+        }
+
+        /* ======== بطاقات الشبكة ======== */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background-color: var(--card-background);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border-top: 4px solid var(--primary-color);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 64, 128, 0.1), rgba(0, 102, 204, 0.1));
+            z-index: 0;
+        }
+
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .card h4 {
+            margin-bottom: 15px;
+            color: var(--text-color);
+            font-size: 1.4rem;
+        }
+
+        .card p {
+            font-size: 1rem;
+            text-align: center;
+            color: var(--text-secondary);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        /* ======== الإحصائيات ======== */
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 40px 0;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            min-width: 150px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+        }
+
+        /* ======== قسم البطولات ======== */
+        .tournament-section {
+            margin-top: 40px;
+        }
+
+        .tournament-hero {
+            background: var(--gradient);
+            color: white;
+            padding: 60px 40px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 40px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .tournament-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://files.catbox.moe/6xms09.jpg') center/cover no-repeat;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .tournament-hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tournament-hero h3 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .tournament-hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+
+        .tournament-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 10px;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .tournament-tab {
+            background: none;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+            color: var(--text-color);
+            font-weight: 600;
+            border-radius: var(--border-radius);
+        }
+
+        .tournament-tab.active {
+            color: var(--accent-color);
+            border-bottom: 3px solid var(--accent-color);
+            background: rgba(0, 102, 204, 0.1);
+        }
+
+        .tournament-content {
+            display: none;
+        }
+
+        .tournament-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* ======== قسم المباريات ======== */
+        .matches-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .match-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .match-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .match-header {
+            background: var(--gradient);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .match-body {
+            padding: 25px;
+        }
+
+        .match-teams {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 1;
+        }
+
+        .team-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid var(--border-color);
+            transition: var(--transition);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .team:hover .team-logo {
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .team-name-large {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-color);
+            margin-top: 10px;
+        }
+
+        .vs-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .vs {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin: 10px 0;
+            background: var(--card-background);
+            padding: 8px 15px;
+            border-radius: 30px;
+            border: 1px solid var(--border-color);
+        }
+
+        .match-time {
+            font-weight: 600;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            background: rgba(0, 102, 204, 0.1);
+            padding: 5px 10px;
+            border-radius: 20px;
+            border: 1px solid var(--border-color);
+        }
+
+        .match-info {
+            background: var(--card-background);
+            padding: 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            width: 100%;
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border-top: 2px solid var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .match-date {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .match-date:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        .match-venue {
+            color: var(--text-secondary);
+        }
+
+        /* ======== قسم الاستوديو ======== */
+        .studio-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 10px;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+            overflow-x: auto;
+        }
+
+        .studio-tab {
+            background: none;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-bottom: 3px solid transparent;
+            color: var(--text-color);
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            white-space: nowrap;
+        }
+
+        .studio-tab.active {
+            color: var(--accent-color);
+            border-bottom: 3px solid var(--accent-color);
+            background: rgba(0, 102, 204, 0.1);
+        }
+
+        .studio-content {
+            display: none;
+        }
+
+        .studio-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        /* ======== قسم البث المباشر ======== */
+        .live-broadcast-section {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-top: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--box-shadow);
+        }
+
+        .live-broadcast-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .live-broadcast-header h3 {
+            color: var(--text-color);
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .live-broadcast-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .live-match-info {
+            background: rgba(0, 102, 204, 0.1);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .live-match-teams {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .live-team {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .live-team-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 0 20px rgba(26, 117, 255, 0.3);
+        }
+
+        .live-team-name {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-color);
+        }
+
+        .live-vs {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent-color);
+            background: var(--card-background);
+            padding: 10px 20px;
+            border-radius: 50%;
+            border: 2px solid var(--border-color);
+        }
+
+        .live-video-container {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            background: #000;
+            min-height: 400px;
+        }
+
+        .live-video-thumbnail {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .live-video-thumbnail:hover {
+            transform: scale(1.02);
+            opacity: 0.9;
+        }
+
+        .live-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: var(--border-radius);
+        }
+
+        .live-badge {
+            background: #ff0000;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: pulseLive 1.5s infinite;
+        }
+
+        @keyframes pulseLive {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .watch-live-btn {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 20px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .watch-live-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            background: linear-gradient(135deg, #0066cc, #004080);
+        }
+
+        .live-description {
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .media-item {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            height: 250px;
+            border: 1px solid var(--border-color);
+        }
+
+        .media-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .media-item img, .media-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .media-overlay {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 15px;
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .media-item:hover .media-overlay {
+            transform: translateY(0);
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+        }
+
+        .video-info {
+            margin-top: 15px;
+            text-align: center;
+            padding: 15px;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+
+        /* ======== قسم اللاعبين ======== */
+        .players-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .player-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .player-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .player-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 117, 255, 0.1), transparent);
+            z-index: 0;
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .player-card:hover::before {
+            opacity: 1;
+        }
+
+        .player-img-container {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
+            position: relative;
+        }
+
+        .player-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--border-color);
+            transition: var(--transition);
+            position: relative;
+            z-index: 1;
+        }
+
+        .player-card:hover .player-img {
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .player-name {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .player-position {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .player-number {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* نافذة تفاصيل اللاعب */
+        .player-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .player-modal.active {
+            display: flex;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .player-modal-content {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            max-width: 500px;
+            width: 100%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--box-shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+            animation: modalSlideIn 0.4s ease;
+        }
+
+        @keyframes modalSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .player-modal-header {
+            background: var(--gradient);
+            color: white;
+            padding: 20px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .player-modal-close {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .player-modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: var(--gold-color);
+        }
+
+        .player-modal-body {
+            padding: 30px;
+        }
+
+        .player-modal-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            border: 5px solid var(--border-color);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            transition: var(--transition);
+        }
+
+        .player-modal-img:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-color);
+        }
+
+        .player-modal-details {
+            text-align: center;
+        }
+
+        .player-modal-details h3 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        .player-modal-details p {
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+
+        /* ======== قسم الأخبار ======== */
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .news-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+
+        .news-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .news-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .news-content {
+            padding: 20px;
+        }
+
+        .news-date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .news-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-color);
+        }
+
+        .news-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 15px;
+        }
+
+        .news-link {
+            display: inline-block;
+            color: var(--accent-color);
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .news-link:hover {
+            color: var(--secondary-color);
+        }
+
+        /* ======== قسم التواصل ======== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .whatsapp-container {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            color: white;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #25D366;
+        }
+
+        .whatsapp-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            z-index: 1;
+        }
+
+        .whatsapp-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .whatsapp-btn {
+            display: inline-block;
+            background: white;
+            color: #25D366;
+            padding: 15px 30px;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 700;
+            margin-top: 20px;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .whatsapp-btn:hover {
+            background: #f0f0f0;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+
+        .contact-info {
+            background: var(--card-background);
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient);
+        }
+
+        .phone-number {
+            direction: ltr;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 20px 0;
+            display: block;
+            background: rgba(0, 102, 204, 0.1);
+            padding: 10px 20px;
+            border-radius: var(--border-radius);
+            border: 2px solid var(--primary-color);
+            color: var(--text-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: var(--gradient);
+            color: white;
+            font-size: 1.4rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        }
+
+        /* ======== قسم الرعاة ======== */
+        .sponsors-section {
+            margin-top: 40px;
+        }
+
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .sponsor-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            border-top: 4px solid var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .sponsor-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .sponsor-logo {
+            max-width: 180px;
+            max-height: 120px;
+            object-fit: contain;
+            margin-bottom: 20px;
+            border-radius: 8px;
+        }
+
+        .sponsor-name {
+            font-size: 1.4rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        .sponsor-contact {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* ======== قسم كادر النادي ======== */
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .staff-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border-top: 4px solid var(--accent-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .staff-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        .staff-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            border: 4px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .staff-card:hover .staff-img {
+            border-color: var(--accent-color);
+            transform: scale(1.05);
+        }
+
+        .staff-name {
+            font-size: 1.3rem;
+            color: var(--text-color);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .staff-position {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* ======== الفيديو ======== */
+        video {
+            width: 100%;
+            border-radius: var(--border-radius);
+            margin-top: 20px;
+            box-shadow: var(--box-shadow);
+        }
+
+        /* ======== قسم المطور ======== */
+        .developer-info {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+        }
+
+        .developer-info h3 {
+            color: var(--text-color);
+            margin-bottom: 10px;
+        }
+
+        /* ======== التذييل ======== */
+        footer {
+            background: var(--gradient);
+            color: white;
+            padding: 50px 10% 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .footer-about p {
+            margin-bottom: 20px;
+            text-align: right;
+            opacity: 0.9;
+        }
+
+        .footer-links h3, .footer-contact h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h3::after, .footer-contact h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 50px;
+            height: 3px;
+            background: white;
+        }
+
+        .footer-links ul {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: white;
+            padding-right: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* ======== زر العودة للأعلى ======== */
+        .floating-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            box-shadow: var(--box-shadow);
+            cursor: pointer;
+            z-index: 100;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .floating-btn.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .floating-btn:hover {
+            transform: scale(1.1);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        /* ======== تأثيرات إضافية ======== */
+        .highlight {
+            background: linear-gradient(120deg, transparent 0%, transparent 50%, rgba(26, 117, 255, 0.2) 50%, rgba(26, 117, 255, 0.2) 100%);
+            background-size: 220% 100%;
+            background-position: 100% 0;
+            transition: background-position 0.5s ease;
+            padding: 2px 5px;
+            border-radius: 3px;
+            color: var(--accent-color);
+        }
+
+        .highlight:hover {
+            background-position: 0 0;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ======== مؤشر التحميل للصور ======== */
+        .image-placeholder {
+            background: var(--card-background);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+        }
+
+        .lazy-load {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lazy-load.loaded {
+            opacity: 1;
+        }
+
+        /* ======== رسائل التنبيه ======== */
+        .alert {
+            padding: 15px;
+            border-radius: var(--border-radius);
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .alert-success {
+            background-color: rgba(212, 237, 218, 0.1);
+            color: #155724;
+            border: 1px solid rgba(195, 230, 203, 0.2);
+        }
+
+        .alert-error {
+            background-color: rgba(248, 215, 218, 0.1);
+            color: #721c24;
+            border: 1px solid rgba(245, 198, 203, 0.2);
+        }
+
+        /* ======== تحسينات التصميم ======== */
+        .modern-card {
+            background: var(--card-background);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 25px;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary-color);
+            border: 1px solid var(--border-color);
+        }
+
+        .modern-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow-hover);
+            border-color: var(--accent-color);
+        }
+
+        /* ======== أزرار محسنة ======== */
+        .submit-btn {
+            background: var(--gradient);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            font-size: 1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--box-shadow-hover);
+        }
+
+        /* ======== الاستجابة ======== */
+        @media (max-width: 1200px) {
+            section {
+                padding: 60px 5%;
+            }
+            
+            footer {
+                padding: 40px 5% 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            header h1 {
+                font-size: 2.8rem;
+            }
+            
+            section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .stats {
+                gap: 10px;
+            }
+            
+            .stat-item {
+                padding: 15px;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .nav-container {
+                justify-content: flex-start;
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+            
+            nav button {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .matches-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .players-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            }
+            
+            .live-video-thumbnail {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .club-title {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            header p {
+                font-size: 1.2rem;
+            }
+            
+            nav {
+                padding: 10px 0;
+            }
+            
+            section h2 {
+                font-size: 2rem;
+            }
+            
+            .grid, .news-grid, .media-grid, .contact-grid, .sponsors-grid, .matches-container, .players-grid, .staff-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .studio-tabs, .tournament-tabs {
+                flex-direction: column;
+            }
+            
+            .studio-tab, .tournament-tab {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-links h3::after, .footer-contact h3::after {
+                right: 50%;
+                transform: translateX(50%);
+            }
+            
+            .floating-btn {
+                bottom: 20px;
+                left: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .match-teams {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .vs-container {
+                margin: 10px 0;
+            }
+            
+            .live-match-teams {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .live-vs {
+                transform: rotate(90deg);
+                margin: 10px 0;
+            }
+            
+            .live-video-thumbnail {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            
+            .logo-container img.logo {
+                width: 140px;
+                height: 140px;
+            }
+            
+            .verified {
+                font-size: 1.5rem;
+            }
+            
+            section {
+                padding: 40px 5%;
+            }
+            
+            .section-header {
+                margin-bottom: 30px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .tournament-hero {
+                padding: 40px 20px;
+            }
+            
+            .tournament-hero h3 {
+                font-size: 2rem;
+            }
+            
+            .player-img-container {
+                width: 100px;
+                height: 100px;
+            }
+            
+            .live-video-thumbnail {
+                height: 250px;
+            }
+            
+            .live-broadcast-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- شاشة التحميل -->
+    <div class="loading" id="loading">
+        <div class="loader">
+            <img class="loader-logo" src="https://files.catbox.moe/6xms09.jpg" alt="شعار نادي شرف الفرع">
+            <div class="loader-ring"></div>
+        </div>
+        <div class="loading-text">جاري تحميل الصفحة...</div>
+    </div>
+
+    <!-- شريط التقدم -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- زر العودة للأعلى -->
+    <div class="floating-btn" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- نافذة تفاصيل اللاعب -->
+    <div class="player-modal" id="playerModal">
+        <div class="player-modal-content">
+            <div class="player-modal-header">
+                <button class="player-modal-close" id="closePlayerModal">
+                    <i class="fas fa-times"></i>
+                </button>
+                <h2>تفاصيل اللاعب</h2>
+            </div>
+            <div class="player-modal-body">
+                <img id="playerModalImg" class="player-modal-img" src="" alt="صورة اللاعب">
+                <div class="player-modal-details">
+                    <h3 id="playerModalName"></h3>
+                    <p id="playerModalPosition"></p>
+                    <p id="playerModalNumber"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الرأس -->
+    <header id="header">
+        <div class="header-content">
+            <div class="logo-container">
+                <img class="logo" src="https://files.catbox.moe/6xms09.jpg" alt="شعار نادي شرف الفرع">
+            </div>
+            <div class="club-title">
+                <h1>نادي شرف الفرع</h1>
+            </div>
+            <div class="official-badge">
+                <span>الصفحة الرسمية</span>
+                <span class="verified"><i class="fas fa-check-circle"></i></span>
+            </div>
+        </div>
+        <div class="scroll-down" id="scrollDown">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- شريط التنقل -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <button class="active" onclick="showSection('about')"><i class="fas fa-info-circle"></i> عن النادي</button>
+            <button onclick="showSection('president')"><i class="fas fa-user-tie"></i> رئيس النادي</button>
+            <button onclick="showSection('players')"><i class="fas fa-users"></i> اللاعبين</button>
+            <button onclick="showSection('coaches')"><i class="fas fa-clipboard-list"></i> الجهاز الفني</button>
+            <button onclick="showSection('tournaments')"><i class="fas fa-trophy"></i> البطولات</button>
+            <button onclick="showSection('sponsors')"><i class="fas fa-handshake"></i> الرعاة</button>
+            <button onclick="showSection('studio')"><i class="fas fa-photo-video"></i> الاستوديو</button>
+            <button onclick="showSection('news')"><i class="fas fa-newspaper"></i> الأخبار</button>
+            <button onclick="showSection('contact')"><i class="fas fa-envelope"></i> التواصل</button>
+        </div>
+    </nav>
+
+    <!-- الأقسام -->
+    <!-- قسم عن النادي -->
+    <section id="about" class="active">
+        <div class="section-header">
+            <h2>عن النادي</h2>
+            <p class="section-subtitle">تعرف على تاريخ نادي شرف الفرع وإنجازاته</p>
+        </div>
+        <img class="section-img" src="https://files.catbox.moe/6xms09.jpg" alt="نادي شرف الفرع">
+        <p>نادي شرف الفرع هو أحد أبرز الأندية الرياضية التي تأسست في عام <span class="highlight">2025</span>، يسعى النادي إلى تحقيق أول بطولة رسمية في عامه الأول</p>
+        <p>يتميز النادي في ضم لاعبين محللين من الفرع ولاعبين محترفين من جميع المحافظات المختلفة...</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number" id="yearsCount">0</span>
+                <span class="stat-label">السنة الأولى...</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="playersCount">0</span>
+                <span class="stat-label">لاعب محترف...</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="trophiesCount">0</span>
+                <span class="stat-label">بطولة محققة</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number" id="fansCount">0</span>
+                <span class="stat-label">مشجع للنادي...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم رئيس النادي -->
+    <section id="president">
+        <div class="section-header">
+            <h2>رئيس النادي</h2>
+            <p class="section-subtitle">تعرف على قيادة النادي ورؤيتها للمستقبل</p>
+        </div>
+        <img class="section-img" src="https://files.catbox.moe/nray9q.jpg" alt="رئيس نادي شرف الفرع">
+        <p>الدكتور <span class="highlight">عبد السلام علي غالب</span>، رئيس نادي شرف الفرع، شخصية قيادية مميزة تجمع بين الخبرة الرياضية والإدارية. يعمل على تطوير النادي وتحفيز اللاعبين على تحقيق أفضل النتائج.</p>
+        <p>يدعم الرئيس جميع أنشطة النادي ويحرص على بناء علاقة قوية مع الجماهير والمجتمع المحلي، لضمان استدامة النجاح والتطور المستمر.</p>
+        
+        <div class="grid">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h4>الرؤية الاستراتيجية</h4>
+                    <p>قيادة النادي نحو آفاق جديدة من التميز الرياضي والمؤسسي.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h4>العلاقات المجتمعية</h4>
+                    <p>بناء شراكات قوية مع المجتمع المحلي والمؤسسات الرياضية.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>التنمية المستدامة</h4>
+                    <p>ضمان نمو مستدام للنادي من خلال خطط طويلة المدى.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اللاعبين -->
+    <section id="players">
+        <div class="section-header">
+            <h2>اللاعبين</h2>
+            <p class="section-subtitle">تعرف على نجوم الفريق والمواهب الواعدة</p>
+        </div>
+        
+        <p>يضم النادي مجموعة متنوعة من اللاعبين الموهوبين الذين يمتلكون مهارات عالية وروح تنافسية قوية، ملتزمون بالتدريب المكثف والمشاركة الفاعلة في المباريات.</p>
+        <p>يضم الفريق <span class="highlight">18 لاعباً أساسياً</span> تم اختيارهم بعناية لتحقيق أفضل النتائج في بطولة كأس بعدان.</p>
+        
+        <div class="players-grid">
+            <!-- اللاعب 1 -->
+            <div class="player-card" onclick="showPlayerDetails('عواد علي عبده طارش', 'حارس مرمى', '1', 'https://files.catbox.moe/bas9kz.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/bas9kz.jpg" alt="عواد علي عبده طارش">
+                </div>
+                <div class="player-name">عواد علي عبده طارش</div>
+                <div class="player-position">حارس مرمى</div>
+                <div class="player-number">الرقم: 1</div>
+            </div>
+            
+            <!-- اللاعب 2 -->
+            <div class="player-card" onclick="showPlayerDetails('منتظر عبدالقادر حامد غالب', 'حارس مرمى', '2', 'https://files.catbox.moe/ojqwqu.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/ojqwqu.jpg" alt="منتظر عبدالقادر حامد غالب">
+                </div>
+                <div class="player-name">منتظر عبدالقادر حامد غالب</div>
+                <div class="player-position">حارس مرمى</div>
+                <div class="player-number">الرقم: 2</div>
+            </div>
+            
+            <!-- اللاعب 3 -->
+            <div class="player-card" onclick="showPlayerDetails('محمد فرحان غالب قحطان', 'دفاع', '3', 'https://files.catbox.moe/g4m1be.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/g4m1be.jpg" alt="محمد فرحان غالب قحطان">
+                </div>
+                <div class="player-name">محمد فرحان غالب قحطان</div>
+                <div class="player-position">دفاع</div>
+                <div class="player-number">الرقم: 3</div>
+            </div>
+            
+            <!-- اللاعب 4 -->
+            <div class="player-card" onclick="showPlayerDetails('محمد سلطان أحمد علي', 'دفاع', '4', 'https://files.catbox.moe/qad7km.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/qad7km.jpg" alt="محمد سلطان أحمد علي">
+                </div>
+                <div class="player-name">محمد سلطان أحمد علي</div>
+                <div class="player-position">دفاع</div>
+                <div class="player-number">الرقم: 4</div>
+            </div>
+            
+            <!-- اللاعب 5 -->
+            <div class="player-card" onclick="showPlayerDetails('محمد عبده أحمد يحيى', 'دفاع', '5', 'https://files.catbox.moe/qj0g13.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/qj0g13.jpg" alt="محمد عبده أحمد يحيى">
+                </div>
+                <div class="player-name">محمد عبده أحمد يحيى</div>
+                <div class="player-position">دفاع</div>
+                <div class="player-number">الرقم: 5</div>
+            </div>
+            
+            <!-- اللاعب 6 -->
+            <div class="player-card" onclick="showPlayerDetails('عواد علي سعيد علي', 'دفاع', '6', 'https://files.catbox.moe/yixvmf.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/yixvmf.jpg" alt="عواد علي سعيد علي">
+                </div>
+                <div class="player-name">عواد علي سعيد علي</div>
+                <div class="player-position">دفاع</div>
+                <div class="player-number">الرقم: 6</div>
+            </div>
+            
+            <!-- اللاعب 7 -->
+            <div class="player-card" onclick="showPlayerDetails('صقر محمد عبده أحمد', 'ضهير أيسر', '7', 'https://files.catbox.moe/h8wag8.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/h8wag8.jpg" alt="صقر محمد عبده أحمد">
+                </div>
+                <div class="player-name">صقر محمد عبده أحمد</div>
+                <div class="player-position">ضهير أيسر</div>
+                <div class="player-number">الرقم: 7</div>
+            </div>
+            
+            <!-- اللاعب 8 -->
+            <div class="player-card" onclick="showPlayerDetails('صلاح عبدالجليل حمود طاهر', 'دفاع', '8', 'https://files.catbox.moe/8t4s1n.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/8t4s1n.jpg" alt="صلاح عبدالجليل حمود طاهر">
+                </div>
+                <div class="player-name">صلاح عبدالجليل حمود طاهر</div>
+                <div class="player-position">دفاع</div>
+                <div class="player-number">الرقم: 8</div>
+            </div>
+            
+            <!-- اللاعب 9 -->
+            <div class="player-card" onclick="showPlayerDetails('عبدالناصر رشاد علي مسعد', 'وسط', '9', 'https://files.catbox.moe/z9sm6f.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/z9sm6f.jpg" alt="عبدالناصر رشاد علي مسعد">
+                </div>
+                <div class="player-name">عبدالناصر رشاد علي مسعد</div>
+                <div class="player-position">وسط</div>
+                <div class="player-number">الرقم: 9</div>
+            </div>
+            
+            <!-- اللاعب 10 -->
+            <div class="player-card" onclick="showPlayerDetails('غمدان وليد احمد سماعيل', 'وسط', '10', 'https://files.catbox.moe/1hi6n8.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/1hi6n8.jpg" alt="غمدان وليد احمد سماعيل">
+                </div>
+                <div class="player-name">غمدان وليد احمد سماعيل</div>
+                <div class="player-position">وسط</div>
+                <div class="player-number">الرقم: 10</div>
+            </div>
+            
+            <!-- اللاعب 11 -->
+            <div class="player-card" onclick="showPlayerDetails('ردمان مصطفى ردمان ناجي', 'وسط', '11', 'https://files.catbox.moe/2jkw8h.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/2jkw8h.jpg" alt="ردمان مصطفى ردمان ناجي">
+                </div>
+                <div class="player-name">ردمان مصطفى ردمان ناجي</div>
+                <div class="player-position">وسط</div>
+                <div class="player-number">الرقم: 11</div>
+            </div>
+            
+            <!-- اللاعب 12 -->
+            <div class="player-card" onclick="showPlayerDetails('محمد رشاد محمد فارس', 'محور', '12', 'https://files.catbox.moe/zl9jh1.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/zl9jh1.jpg" alt="محمد رشاد محمد فارس">
+                </div>
+                <div class="player-name">محمد رشاد محمد فارس</div>
+                <div class="player-position">محور</div>
+                <div class="player-number">الرقم: 12</div>
+            </div>
+            
+            <!-- اللاعب 13 -->
+            <div class="player-card" onclick="showPlayerDetails('عبدالخالق محمد ثابت احمد', 'محور', '13', 'https://files.catbox.moe/ztvax3.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/ztvax3.jpg" alt="عبدالخالق محمد ثابت احمد">
+                </div>
+                <div class="player-name">عبدالخالق محمد ثابت احمد</div>
+                <div class="player-position">محور</div>
+                <div class="player-number">الرقم: 13</div>
+            </div>
+            
+            <!-- اللاعب 14 -->
+            <div class="player-card" onclick="showPlayerDetails('يعقوب عبده محمد سيف', 'صانع لعب', '14', 'https://files.catbox.moe/i8g0up.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/i8g0up.jpg" alt="يعقوب عبده محمد سيف">
+                </div>
+                <div class="player-name">يعقوب عبده محمد سيف</div>
+                <div class="player-position">صانع لعب</div>
+                <div class="player-number">الرقم: 14</div>
+            </div>
+            
+            <!-- اللاعب 15 -->
+            <div class="player-card" onclick="showPlayerDetails('ابراهيم محمد عبدالله محمد', 'صانع لعب', '15', 'https://files.catbox.moe/1gecvi.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/1gecvi.jpg" alt="ابراهيم محمد عبدالله محمد">
+                </div>
+                <div class="player-name">ابراهيم محمد عبدالله محمد</div>
+                <div class="player-position">صانع لعب</div>
+                <div class="player-number">الرقم: 15</div>
+            </div>
+            
+            <!-- اللاعب 16 -->
+            <div class="player-card" onclick="showPlayerDetails('مرون صادق سعدان الروسي', 'مهاجم', '16', 'https://files.catbox.moe/spoq94.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/spoq94.jpg" alt="مرون صادق سعدان الروسي">
+                </div>
+                <div class="player-name">مرون صادق سعدان الروسي</div>
+                <div class="player-position">مهاجم</div>
+                <div class="player-number">الرقم: 16</div>
+            </div>
+            
+            <!-- اللاعب 17 -->
+            <div class="player-card" onclick="showPlayerDetails('فيصل مسعد سليمان محمد', 'مهاجم', '17', 'https://files.catbox.moe/ngao2b.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/ngao2b.jpg" alt="فيصل مسعد سليمان محمد">
+                </div>
+                <div class="player-name">فيصل مسعد سليمان محمد</div>
+                <div class="player-position">مهاجم</div>
+                <div class="player-number">الرقم: 17</div>
+            </div>
+            
+            <!-- اللاعب 18 -->
+            <div class="player-card" onclick="showPlayerDetails('هاشم صادق حميد خالد', 'جناح ايمن', '18', 'https://files.catbox.moe/oy6b5a.jpg')">
+                <div class="player-img-container">
+                    <img class="player-img" src="https://files.catbox.moe/oy6b5a.jpg" alt="هاشم صادق حميد خالد">
+                </div>
+                <div class="player-name">هاشم صادق حميد خالد</div>
+                <div class="player-position">جناح ايمن</div>
+                <div class="player-number">الرقم: 18</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الجهاز الفني -->
+    <section id="coaches">
+        <div class="section-header">
+            <h2>الجهاز الفني والإداري</h2>
+            <p class="section-subtitle">الفريق الذي يقود النادي نحو التميز</p>
+        </div>
+        
+        <p>يضم النادي فريقاً فنياً وإدارياً متميزاً يعمل على تطوير أداء اللاعبين وتحقيق أفضل النتائج في البطولات والمباريات.</p>
+        
+        <div class="staff-grid">
+            <!-- المدرب -->
+            <div class="staff-card">
+                <img class="staff-img" src="https://files.catbox.moe/xx24bo.jpg" alt="ابراهيم صادق الراشدي">
+                <div class="staff-name">ابراهيم صادق الراشدي</div>
+                <div class="staff-position">المدرب الرئيسي</div>
+                <p>يتمتع بخبرة واسعة في التدريب الرياضي</p>
+            </div>
+            
+            <!-- مساعد المدرب -->
+            <div class="staff-card">
+                <img class="staff-img" src="https://files.catbox.moe/rpwsig.jpg" alt="جهاز محمد طه">
+                <div class="staff-name">جهاز محمد طه</div>
+                <div class="staff-position">مساعد المدرب</div>
+                <p>يدعم المدرب الرئيسي في التخطيط والتنفيذ</p>
+            </div>
+            
+            <!-- المسؤول المالي -->
+            <div class="staff-card">
+                <img class="staff-img" src="https://files.catbox.moe/4tmg7a.jpg" alt="عمر عبدالله أحمد">
+                <div class="staff-name">عمر عبدالله أحمد</div>
+                <div class="staff-position">المسؤول المالي</div>
+                <p>يدير الشؤون المالية والإدارية للنادي</p>
+            </div>
+            
+            <!-- المدير الفني 1 -->
+            <div class="staff-card">
+                <img class="staff-img" src="https://files.catbox.moe/ppgtmd.jpg" alt="ياسر مصلح الشرفي">
+                <div class="staff-name">ياسر مصلح الشرفي</div>
+                <div class="staff-position">المدير الفني</div>
+                <p>يضع الخطط الفنية ويشرف على التنفيذ</p>
+            </div>
+            
+            <!-- المدير الفني 2 -->
+            <div class="staff-card">
+                <img class="staff-img" src="https://files.catbox.moe/ro7ygg.jpg" alt="عبدالله عبدالسلام فرحان">
+                <div class="staff-name">عبدالله عبدالسلام فرحان</div>
+                <div class="staff-position">المدير الفني</div>
+                <p>يشرف على الجوانب التقنية والخطط</p>
+            </div>
+            
+            <!-- طبيب النادي -->
+            <div class="staff-card">
+                <img class="staff-img" src="https://files.catbox.moe/dh3y07.jpg" alt="الدكتور زياد عبدالجليل الراشدي">
+                <div class="staff-name">الدكتور زياد عبدالجليل الراشدي</div>
+                <div class="staff-position">طبيب النادي</div>
+                <p>يهتم بالصحة البدنية والعلاج الطبيعي للاعبين</p>
+            </div>
+        </div>
+        
+        <div class="developer-info">
+            <h3>مطور النظام</h3>
+            <p>تم تطوير النظام الرقمي للنادي بواسطة <span class="highlight">القيادة بن عبد الراشدي</span></p>
+        </div>
+    </section>
+
+    <!-- قسم البطولات -->
+    <section id="tournaments">
+        <div class="section-header">
+            <h2>البطولات والمباريات</h2>
+            <p class="section-subtitle">إنجازات النادي والمسابقات القادمة</p>
+        </div>
+        
+        <div class="tournament-hero">
+            <div class="tournament-hero-content">
+                <h3>بطولة كأس بعدان - النسخة 18</h3>
+                <p>نادي شرف الفرع يشارك ضمن أقوى الفرق في بطولة بعدان - ستقام المباريات خلال 14 يوم</p>
+            </div>
+        </div>
+        
+        <div class="tournament-tabs">
+            <button class="tournament-tab active" onclick="openTournamentTab('matches')">المباريات</button>
+        </div>
+        
+        <div id="matches" class="tournament-content active">
+            <h3 style="text-align: center; margin-bottom: 20px; color: var(--text-color);">مباريات النادي في بطولة بعدان</h3>
+            
+            <div class="matches-container">
+                <!-- مباراة 1 -->
+                <div class="match-card">
+                    <div class="match-header">الجولة الأولى - المجموعة الثانية</div>
+                    <div class="match-body">
+                        <div class="match-teams">
+                            <div class="team">
+                                <img class="team-logo" src="https://files.catbox.moe/6xms09.jpg" alt="شرف الفرع">
+                                <div class="team-name-large">شرف الفرع</div>
+                            </div>
+                            <div class="vs-container">
+                                <div class="vs">VS</div>
+                                <div class="match-time">1:30 ظهراً</div>
+                            </div>
+                            <div class="team">
+                                <img class="team-logo" src="https://files.catbox.moe/zdop1w.jpg" alt="اتحاد بني مدسم">
+                                <div class="team-name-large">اتحاد بني مدسم</div>
+                            </div>
+                        </div>
+                        <div class="match-info">
+                            <div class="match-date" onclick="showLiveBroadcast()">الأربعاء 2025/12/3</div>
+                            <div class="match-venue">🏟️ ملعب الفتح الرياضي</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- مباراة 2 -->
+                <div class="match-card">
+                    <div class="match-header">الجولة الثانية - المجموعة الثانية</div>
+                    <div class="match-body">
+                        <div class="match-teams">
+                            <div class="team">
+                                <img class="team-logo" src="https://files.catbox.moe/6xms09.jpg" alt="شرف الفرع">
+                                <div class="team-name-large">شرف الفرع</div>
+                            </div>
+                            <div class="vs-container">
+                                <div class="vs">VS</div>
+                                <div class="match-time">3:30 عصراً</div>
+                            </div>
+                            <div class="team">
+                                <img class="team-logo" src="https://files.catbox.moe/e5kgiu.jpg" alt="النجم الرياضي">
+                                <div class="team-name-large">النجم الرياضي</div>
+                            </div>
+                        </div>
+                        <div class="match-info">
+                            <div class="match-date" onclick="showLiveBroadcast()">السبت 2025/12/6</div>
+                            <div class="match-venue">🏟️ ملعب الفتح الرياضي</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- مباراة 3 -->
+                <div class="match-card">
+                    <div class="match-header">الجولة الثالثة - المجموعة الثانية</div>
+                    <div class="match-body">
+                        <div class="match-teams">
+                            <div class="team">
+                                <img class="team-logo" src="https://files.catbox.moe/6xms09.jpg" alt="شرف الفرع">
+                                <div class="team-name-large">شرف الفرع</div>
+                            </div>
+                            <div class="vs-container">
+                                <div class="vs">VS</div>
+                                <div class="match-time">3:30 عصراً</div>
+                            </div>
+                            <div class="team">
+                                <img class="team-logo" src="https://files.catbox.moe/m71z26.jpg" alt="اتحاد المخادر">
+                                <div class="team-name-large">اتحاد المخادر</div>
+                            </div>
+                        </div>
+                        <div class="match-info">
+                            <div class="match-date" onclick="showLiveBroadcast()">الأربعاء 2025/12/17</div>
+                            <div class="match-venue">🏟️ ملعب الفتح الرياضي</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الرعاة -->
+    <section id="sponsors">
+        <div class="section-header">
+            <h2>رعاة النادي</h2>
+            <p class="section-subtitle">شركاء النجاح والداعمين الأساسيين</p>
+        </div>
+        
+        <div class="sponsors-grid">
+            <div class="sponsor-card">
+                <img class="sponsor-logo" src="https://files.catbox.moe/rfh9tp.jpg" alt="مكتب العامريه للسفريات والسياحة">
+                <h3 class="sponsor-name">مكتب العامريه للسفريات والسياحة</h3>
+                <p>راعي رسمي للنادي، يقدم الدعم اللوجستي والمالي للفريق</p>
+                <div class="sponsor-contact">راعي رسمي</div>
+            </div>
+            
+            <div class="sponsor-card">
+                <img class="sponsor-logo" src="https://files.catbox.moe/ce146c.jpg" alt="أبو بكر ناصر للسفريات والسياحة">
+                <h3 class="sponsor-name">أبو بكر ناصر للسفريات والسياحة</h3>
+                <p>راعي رسمي للنادي، يقدم الدعم اللوجستي والمالي للفريق</p>
+                <div class="sponsor-contact">صنعاء شارع القدس - امام السفارة السعودية</div>
+            </div>
+            
+            <div class="sponsor-card">
+                <img class="sponsor-logo" src="https://files.catbox.moe/x047vv.jpg" alt="فندق واجنحة السعيد السياحي">
+                <h3 class="sponsor-name">فندق واجنحة السعيد السياحي</h3>
+                <p>راعي رسمي للنادي، يوفر الدعم المالي واللوجستي للفريق</p>
+                <div class="sponsor-contact">راعي رسمي</div>
+            </div>
+            
+            <div class="sponsor-card">
+                <img class="sponsor-logo" src="https://files.catbox.moe/7gau3s.jpg" alt="شبكة الرمادي نت اللاسلكية">
+                <h3 class="sponsor-name">شبكة الرمادي نت اللاسلكية</h3>
+                <p>راعي رسمي للنادي، يوفر الدعم التقني والمالي للفريق</p>
+                <div class="sponsor-contact">راعي رسمي</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الاستوديو -->
+    <section id="studio">
+        <div class="section-header">
+            <h2>الاستوديو</h2>
+            <p class="section-subtitle">استكشف عالم النادي من خلال الوسائط المتعددة</p>
+        </div>
+        
+        <div class="studio-tabs">
+            <button class="studio-tab" onclick="openStudioTab('behind-scenes')">الكواليس</button>
+            <button class="studio-tab" onclick="openStudioTab('videos')">الفيديوهات الرسمية</button>
+            <button class="studio-tab active" onclick="openStudioTab('live-broadcast')">البث المباشر</button>
+        </div>
+        
+        <!-- قسم البث المباشر -->
+        <div id="live-broadcast" class="studio-content active">
+            <div class="live-broadcast-section">
+                <div class="live-broadcast-header">
+                    <h3>البث المباشر - مباراة الشرف الفرع</h3>
+                    <p>شاهد البث المباشر لمباراة الشرف الفرع ضد اتحاد بني مدسم</p>
+                </div>
+                
+                <div class="live-match-info">
+                    <div class="live-match-teams">
+                        <div class="live-team">
+                            <img class="live-team-logo" src="https://files.catbox.moe/6xms09.jpg" alt="شرف الفرع">
+                            <div class="live-team-name">شرف الفرع</div>
+                        </div>
+                        
+                        <div class="live-vs">VS</div>
+                        
+                        <div class="live-team">
+                            <img class="live-team-logo" src="https://files.catbox.moe/zdop1w.jpg" alt="اتحاد بني مدسم">
+                            <div class="live-team-name">اتحاد بني مدسم</div>
+                        </div>
+                    </div>
+                    
+                    <div class="match-info" style="background: transparent; border: none;">
+                        <div class="match-date" style="color: var(--text-color);">الأربعاء 2025/12/3 - 1:30 ظهراً</div>
+                        <div class="match-venue">ملعب الفتح الرياضي</div>
+                    </div>
+                </div>
+                
+                <div class="live-video-container">
+                    <img class="live-video-thumbnail" src="https://files.catbox.moe/ap41ct.jpg" alt="البث المباشر">
+                    <div class="live-video-overlay">
+                        <div class="live-badge">بث مباشر</div>
+                        <h3 style="color: white; margin-bottom: 10px;">الشرف الفرع VS اتحاد بني مدسم</h3>
+                        <p style="color: rgba(255, 255, 255, 0.9);">الجولة الأولى - بطولة كأس بعدان</p>
+                        <a href="https://www.facebook.com/suqoorbadan.football.ye/videos/869752985804523/?mibextid=rS40aB7S9Ucbxw6v" class="watch-live-btn" target="_blank">
+                            <i class="fab fa-facebook"></i> شاهد البث على فيسبوك
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="live-description">
+                    <h4>تفاصيل البث المباشر</h4>
+                    <p>انضم إلينا لمشاهدة البث المباشر لمباراة الشرف الفرع ضد اتحاد بني مدسم في الجولة الأولى من بطولة كأس بعدان النسخة 18.</p>
+                    <p>سيتم البث المباشر عبر صفحة صقور بعدان على فيسبوك. اضغط على زر "شاهد البث على فيسبوك" أعلاه للانتقال إلى صفحة البث.</p>
+                    <p><strong>ملاحظة:</strong> البث المباشر سيعرض على صفحة فيسبوك ولا يمكن تضمينه مباشرة في الموقع بسبب سياسات فيسبوك.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- قسم الكواليس -->
+        <div id="behind-scenes" class="studio-content">
+            <p>استمتع بمشاهدة اللحظات خلف الكواليس للفريق واللاعبين:</p>
+            <div class="media-grid">
+                <div class="media-item">
+                    <div style="background: var(--card-background); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                        <i class="fas fa-image" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="media-overlay">
+                        <h4>صورة من التدريب</h4>
+                        <p>لحظة من تدريبات الفريق</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div style="background: var(--card-background); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                        <i class="fas fa-video" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="media-overlay">
+                        <h4>فيديو خلف الكواليس</h4>
+                        <p>لحظات ممتعة من خلف الكواليس</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div style="background: var(--card-background); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                        <i class="fas fa-image" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="media-overlay">
+                        <h4>معسكر الفريق</h4>
+                        <p>لحظات من معسكر الفريق التحضيري</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- قسم الفيديوهات -->
+        <div id="videos" class="studio-content">
+            <p>شاهد أبرز مقاطع الفيديو الرسمية للنادي:</p>
+            
+            <div class="video-container">
+                <video controls poster="https://files.catbox.moe/6xms09.jpg">
+                    <source src="https://raw.githubusercontent.com/Sites87733-glitch/telegram-videos-gallery/main/videos/video_20251115_235247_687794.mp4" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+                <div class="video-info">
+                    <h4>ملخص المباراة الودية</h4>
+                    <p>أبرز اللحظات من المباراة الودية التي فاز بها النادي</p>
+                </div>
+            </div>
+            
+            <div class="media-grid" style="margin-top: 30px;">
+                <div class="media-item">
+                    <div style="background: var(--card-background); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                        <i class="fas fa-play-circle" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="media-overlay">
+                        <h4>مقابلة اللاعبين</h4>
+                        <p>لقاء حصري مع نجوم الفريق</p>
+                    </div>
+                </div>
+                <div class="media-item">
+                    <div style="background: var(--card-background); width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: var(--text-secondary);">
+                        <i class="fas fa-play-circle" style="font-size: 3rem;"></i>
+                    </div>
+                    <div class="media-overlay">
+                        <h4>تقرير خاص</h4>
+                        <p>تقرير عن استعدادات الفريق</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم الأخبار -->
+    <section id="news">
+        <div class="section-header">
+            <h2>الأخبار والتحديثات</h2>
+            <p class="section-subtitle">تابع آخر المستجدات حول النادي</p>
+        </div>
+        
+        <div class="news-grid">
+            <div class="news-card">
+                <img class="news-img" src="https://files.catbox.moe/ty0ngl.jpg" alt="خبر عاجل">
+                <div class="news-content">
+                    <div class="news-date">خبر عاجل</div>
+                    <h3 class="news-title">تغييرات إدارية في نادي الشرف</h3>
+                    <p class="news-excerpt">حفاظاً منا على استمرارية عمل نادي الشرف، وحرصاً على تحسين مستوى جاهزيته للمشاركة في بطولة كأس بعدان...</p>
+                    <a href="javascript:void(0)" class="news-link" onclick="showNewsDetail(1)">اقرأ المزيد</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- تفاصيل الخبر -->
+        <div id="news-detail-1" class="news-detail" style="display: none; margin-top: 40px; padding: 30px; background: var(--card-background); border-radius: var(--border-radius); border: 1px solid var(--border-color);">
+            <h3 style="color: var(--text-color);">تغييرات إدارية في نادي الشرف</h3>
+            <p class="news-date">خبر عاجل</p>
+            <img src="https://files.catbox.moe/ty0ngl.jpg" alt="خبر عاجل" style="width: 100%; border-radius: var(--border-radius); margin: 20px 0;">
+            <p>حفاظاً منا على استمرارية عمل نادي الشرف، وحرصاً على تحسين مستوى جاهزيته للمشاركة في بطولة كأس بعدان ونظرًا للظروف الصعبة التي مر بها النادي خلال الفترة الماضية، قرر الهيكل الإداري بنادي الشرف إعفاء رئيس النادي <span class="highlight">صلاح الدين صادق</span> من رئاسة النادي، وذلك بعد اجماع كافة أعضاء النادي وبعد النظر في ملاحظات إدارية.</p>
+            <p>ويستمر عمل النادي بقيادة رئيسه الفخري الدكتور <span class="highlight">عبدالسلام دبوان</span>، وبمساندة كافة أعضاء إدارة النادي، لضمان الاستمرار وتنظيم العمل خلال المرحلة القادمة.</p>
+            <p>نؤكد للجميع أن هذا القرار جاء بما يخدم مصلحة النادي أولًا وأخيرًا، ويهدف إلى تحسين الأداء واستمرار مسيرة النادي بشكل أفضل ونظراً للحاجة الماسة للمضي نحو المشاركة.</p>
+            <p>ونسأل الله التوفيق للجميع.</p>
+            <button onclick="hideNewsDetail(1)" class="submit-btn" style="margin-top: 20px;">عودة إلى الأخبار</button>
+        </div>
+    </section>
+
+    <!-- قسم التواصل -->
+    <section id="contact">
+        <div class="section-header">
+            <h2>تواصل معنا</h2>
+            <p class="section-subtitle">نحن هنا للإجابة على استفساراتك</p>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="whatsapp-container">
+                <div class="whatsapp-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </div>
+                <h3>تواصل معنا عبر واتساب</h3>
+                <p>للتواصل المباشر مع إدارة النادي، يمكنك التواصل معنا عبر واتساب على الرقم التالي:</p>
+                <span class="phone-number">+967 711 890 053</span>
+                <a href="https://wa.me/967711890053" class="whatsapp-btn" target="_blank">
+                    <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+                </a>
+            </div>
+            
+            <div class="contact-info">
+                <h3>تابعنا على وسائل التواصل الاجتماعي</h3>
+                <p>ابق على اطلاع بآخر أخبار النادي وتفاصيل المباريات من خلال متابعة حساباتنا على وسائل التواصل الاجتماعي</p>
+                
+                <div class="social-links">
+                    <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- التذييل -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <img class="footer-logo" src="https://files.catbox.moe/6xms09.jpg" alt="شعار نادي شرف الفرع">
+                <p>نادي الشرف الرياضي نادي في جديد في محافظة إب فرع العدين تأسس 2025. نادي جديد يسعى لرفع مكانة الفرع إلى مستوى رياضي عالي في الرياضة</p>
+                <div class="social-links">
+                    <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="انستجرام"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+                    <a href="#" aria-label="تيك توك"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h3>روابط سريعة</h3>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="showSection('about')">عن النادي</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('players')">اللاعبين</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('tournaments')">البطولات</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('sponsors')">الرعاة</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('news')">الأخبار</a></li>
+                    <li><a href="javascript:void(0)" onclick="showSection('contact')">التواصل</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h3>معلومات التواصل</h3>
+                <p><i class="fas fa-phone"></i> <span class="phone-number">+967717235488</span></p>
+                <a href="https://wa.me/967711890053" class="whatsapp-btn" target="_blank" style="display: inline-block; margin-top: 10px;">
+                    <i class="fab fa-whatsapp"></i> واتساب
+                </a>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>جميع الحقوق محفوظة &copy; نادي شرف الفرع 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        // شاشة التحميل - حل محسّن
+        document.addEventListener('DOMContentLoaded', function() {
+            const loading = document.getElementById('loading');
+            
+            // إخفاء التحميل بعد وقت قصير
+            setTimeout(function() {
+                loading.classList.add('hidden');
+            }, 800);
+            
+            // حل احتياطي: إخفاء التحميل بعد 3 ثواني كحد أقصى
+            setTimeout(function() {
+                if (!loading.classList.contains('hidden')) {
+                    loading.classList.add('hidden');
+                }
+            }, 3000);
+            
+            // إضافة تأثير fade-in للعناصر عند التحميل
+            const fadeElements = document.querySelectorAll('.card, .news-card, .media-item, .match-card, .player-card, .sponsor-card, .staff-card');
+            fadeElements.forEach(element => {
+                element.classList.add('fade-in');
+            });
+            
+            // محاكاة تحميل الصور
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (img.complete) {
+                    img.classList.add('loaded');
+                } else {
+                    img.addEventListener('load', function() {
+                        this.classList.add('loaded');
+                    });
+                    // حل احتياطي للصور التي تفشل في التحميل
+                    img.addEventListener('error', function() {
+                        this.classList.add('loaded');
+                    });
+                }
+            });
+        });
+
+        // حل إضافي: إخفاء التحميل عند أي خطأ
+        window.addEventListener('error', function() {
+            const loading = document.getElementById('loading');
+            loading.classList.add('hidden');
+        });
+
+        // شريط التقدم
+        window.onscroll = function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "%";
+            
+            // إخفاء وإظهار شريط التنقل
+            const navbar = document.getElementById('navbar');
+            if (window.pageYOffset > 100) {
+                navbar.classList.add('hidden');
+            } else {
+                navbar.classList.remove('hidden');
+            }
+        };
+
+        // التنقل بين الأقسام
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('section');
+            const buttons = document.querySelectorAll('nav button');
+            sections.forEach(sec => sec.classList.remove('active'));
+            buttons.forEach(btn => btn.classList.remove('active'));
+            document.getElementById(sectionId).classList.add('active');
+            
+            // إخفاء تفاصيل الأخبار إذا كانت مفتوحة
+            const newsDetails = document.querySelectorAll('.news-detail');
+            newsDetails.forEach(detail => {
+                detail.style.display = 'none';
+            });
+            
+            // إظهار قائمة الأخبار إذا كنا في قسم الأخبار
+            if (sectionId === 'news') {
+                const newsGrid = document.querySelector('.news-grid');
+                if (newsGrid) newsGrid.style.display = 'grid';
+            }
+            
+            // إضافة active class للزر المناسب
+            const activeButton = document.querySelector(`nav button[onclick="showSection('${sectionId}')"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
+            }
+            
+            // إغلاق نافذة تفاصيل اللاعب إذا كانت مفتوحة
+            const playerModal = document.getElementById('playerModal');
+            playerModal.classList.remove('active');
+            
+            // التمرير السلس للقسم المطلوب
+            if (sectionId !== 'about') {
+                document.getElementById(sectionId).scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // تبويبات البطولات
+        function openTournamentTab(tabName) {
+            const tabContents = document.getElementsByClassName("tournament-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            const tabButtons = document.getElementsByClassName("tournament-tab");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+
+        // تبويبات الاستوديو
+        function openStudioTab(tabName) {
+            const tabContents = document.getElementsByClassName("studio-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].classList.remove("active");
+            }
+            
+            const tabButtons = document.getElementsByClassName("studio-tab");
+            for (let i = 0; i < tabButtons.length; i++) {
+                tabButtons[i].classList.remove("active");
+            }
+            
+            document.getElementById(tabName).classList.add("active");
+            event.currentTarget.classList.add("active");
+        }
+
+        // زر العودة للأعلى
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('show');
+            } else {
+                scrollToTopBtn.classList.remove('show');
+            }
+            
+            // تأثيرات fade-in للعناصر
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < window.innerHeight - elementVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        });
+        
+        scrollToTopBtn.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // التمرير للأسفل عند النقر على السهم
+        document.getElementById('scrollDown').addEventListener('click', function() {
+            document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // عدادات الإحصاءات
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                start += increment;
+                if (start >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(start);
+                }
+            }, 16);
+        }
+
+        // تشغيل العدادات عند التمرير للقسم
+        const observerOptions = {
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    if (entry.target.id === 'about') {
+                        animateCounter(document.getElementById('yearsCount'), 1, 2000);
+                        animateCounter(document.getElementById('playersCount'), 18, 2000);
+                        animateCounter(document.getElementById('trophiesCount'), 1, 2000);
+                        animateCounter(document.getElementById('fansCount'), 5000, 2000);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        observer.observe(document.getElementById('about'));
+
+        // وظائف عرض وإخفاء تفاصيل الأخبار
+        function showNewsDetail(newsId) {
+            // إخفاء جميع تفاصيل الأخبار
+            const newsDetails = document.querySelectorAll('.news-detail');
+            newsDetails.forEach(detail => {
+                detail.style.display = 'none';
+            });
+            
+            // إخفاء شبكة الأخبار
+            const newsGrid = document.querySelector('.news-grid');
+            if (newsGrid) newsGrid.style.display = 'none';
+            
+            // إظهار التفاصيل المطلوبة
+            const newsDetail = document.getElementById(`news-detail-${newsId}`);
+            if (newsDetail) newsDetail.style.display = 'block';
+        }
+        
+        function hideNewsDetail(newsId) {
+            // إخفاء التفاصيل
+            const newsDetail = document.getElementById(`news-detail-${newsId}`);
+            if (newsDetail) newsDetail.style.display = 'none';
+            
+            // إظهار شبكة الأخبار
+            const newsGrid = document.querySelector('.news-grid');
+            if (newsGrid) newsGrid.style.display = 'grid';
+        }
+
+        // نافذة تفاصيل اللاعب
+        function showPlayerDetails(name, position, number, image) {
+            // تشغيل صوت النقرة
+            playClickSound();
+            
+            document.getElementById('playerModalName').textContent = name;
+            document.getElementById('playerModalPosition').textContent = `المركز: ${position}`;
+            document.getElementById('playerModalNumber').textContent = `الرقم: ${number}`;
+            document.getElementById('playerModalImg').src = image;
+            document.getElementById('playerModalImg').alt = name;
+            
+            const modal = document.getElementById('playerModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // تشغيل صوت النقرة
+        function playClickSound() {
+            try {
+                // إنشاء صوت نقرة بسيط باستخدام Web Audio API
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const oscillator = audioContext.createOscillator();
+                const gainNode = audioContext.createGain();
+                
+                oscillator.connect(gainNode);
+                gainNode.connect(audioContext.destination);
+                
+                oscillator.frequency.value = 800;
+                oscillator.type = 'sine';
+                
+                gainNode.gain.setValueAtTime(0.1, audioContext.currentTime);
+                gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.1);
+                
+                oscillator.start(audioContext.currentTime);
+                oscillator.stop(audioContext.currentTime + 0.1);
+            } catch (error) {
+                // إذا فشل AudioContext، نستخدم صوت HTML5 بسيط
+                console.log("Using fallback click sound");
+                const audio = new Audio('data:audio/wav;base64,UklGRigAAABXQVZFZm10IBIAAAABAAEAQB8AAEAfAAABAAgAZGF0YQ');
+                audio.volume = 0.1;
+                audio.play().catch(() => {
+                    // تجاهل الأخطاء إذا فشل تشغيل الصوت
+                });
+            }
+        }
+
+        // إغلاق نافذة تفاصيل اللاعب
+        document.getElementById('closePlayerModal').addEventListener('click', function() {
+            const modal = document.getElementById('playerModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+
+        // إغلاق النافذة عند النقر خارجها
+        document.getElementById('playerModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+
+        // الانتقال إلى قسم البث المباشر
+        function showLiveBroadcast() {
+            // الانتقال إلى قسم الاستوديو
+            showSection('studio');
+            
+            // فتح تبويب البث المباشر
+            setTimeout(function() {
+                openStudioTab('live-broadcast');
+                
+                // التمرير إلى قسم البث المباشر
+                setTimeout(function() {
+                    const liveSection = document.querySelector('.live-broadcast-section');
+                    if (liveSection) {
+                        liveSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            }, 100);
+        }
+    </script>
+</body>
+</html>
